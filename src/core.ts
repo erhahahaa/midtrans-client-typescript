@@ -45,13 +45,13 @@ export interface ChargeParameter {
   credit_card?: CreditCard;
   bank_transfer?: BankTransfer;
   gopay?: Gopay;
-  custom_expiry: {
+  custom_expiry?: {
     order_time?: string; // RFC 3339 of ISO 8601 format
     expiry_duration: number;
     unit: 'second' | 'minute' | 'hour' | 'day'
   };
   qris?: QRIS;
-  metadata: Record<string, any>;
+  metadata?: Record<string, any>;
   [key: string]: any;
 }
 
