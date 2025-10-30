@@ -3,6 +3,7 @@ import { HttpClient } from './http-client';
 import { Transaction } from './transaction';
 import type { CustomerDetails, ItemDetails, PaymentType, TransactionDetails } from './types';
 
+
 /**
  * Credit card details
  */
@@ -15,8 +16,26 @@ export interface CreditCard {
   save_token_id?: boolean;
 }
 
+export interface Gopay {
+  enable_callback?: boolean;
+  callback_url?: string;
+  pre_auth?: boolean;
+  recurring?: boolean;
+
+}
+
+export interface QRIS {
+  acquirer: 'airpay shopee' | 'gopay';
+}
+
+export interface BankTransfer {
+  bank: 'permata' | 'bni' | 'bri' | 'bca'
+  va_number?: string
+}
+
 /**
  * Charge parameter
+ * Documentation: https://docs.midtrans.com/reference/charge-transactions-1
  */
 export interface ChargeParameter {
   payment_type: PaymentType;
@@ -24,14 +43,15 @@ export interface ChargeParameter {
   item_details?: ItemDetails[];
   customer_details?: CustomerDetails;
   credit_card?: CreditCard;
-  bank_transfer?: {
-    bank?: string;
-    va_number?: string;
+  bank_transfer?: BankTransfer;
+  gopay?: Gopay;
+  custom_expiry: {
+    order_time?: string; // RFC 3339 of ISO 8601 format
+    expiry_duration: number;
+    unit: 'second' | 'minute' | 'hour' | 'day'
   };
-  gopay?: {
-    enable_callback?: boolean;
-    callback_url?: string;
-  };
+  qris?: QRIS;
+  metadata: Record<string, any>;
   [key: string]: any;
 }
 
