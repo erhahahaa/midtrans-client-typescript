@@ -52,3 +52,5 @@ export interface CustomerDetails {
  * Documentation: https://docs.midtrans.com/docs/https-notification-webhooks
  */
 export type PaymentType = 'gopay' | 'qris' | 'shopeepay' | 'bank_transfer' | 'echannel' | 'cstore' | 'akulaku'
+
+export { }
