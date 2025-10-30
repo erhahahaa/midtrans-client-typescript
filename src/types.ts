@@ -28,7 +28,6 @@ export interface TransactionDetails {
 export interface Address {
   first_name?: string;
   last_name?: string;
-  email?: string;
   phone?: string;
   address?: string;
   city?: string;
@@ -44,6 +43,6 @@ export interface CustomerDetails {
   last_name?: string;
   email?: string;
   phone?: string;
-  billing_address?: Address;
-  shipping_address?: Address;
+  billing_address?: Address[];
+  shipping_address?: Address[];
 }
