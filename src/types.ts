@@ -46,3 +46,9 @@ export interface CustomerDetails {
   billing_address?: Address[];
   shipping_address?: Address[];
 }
+
+/**
+ * Supported payment type
+ * Documentation: https://docs.midtrans.com/docs/https-notification-webhooks
+ */
+export type PaymentType = 'gopay' | 'qris' | 'shopeepay' | 'bank_transfer' | 'echannel' | 'cstore' | 'akulaku'
