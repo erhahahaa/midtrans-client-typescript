@@ -53,4 +53,17 @@ export interface CustomerDetails {
  */
 export type PaymentType = 'gopay' | 'qris' | 'shopeepay' | 'bank_transfer' | 'echannel' | 'cstore' | 'akulaku'
 
+/**
+ * Request headers
+ */
+export interface RequestHeaders {
+  [key: string]: string;
+}
+
+
+/**
+ * Request body
+ */
+export type RequestBody = Record<string, any>;
+
 export { }

@@ -1,5 +1,6 @@
 import { SnapBiConfig } from './config';
 import { SnapBiApiRequestor } from './api-requestor';
+import type { RequestBody, RequestHeaders } from '../types';
 
 /**
  * Payment method types
@@ -24,17 +25,6 @@ export interface PaymentResponse {
   [key: string]: any;
 }
 
-/**
- * Request headers
- */
-export interface RequestHeaders {
-  [key: string]: string;
-}
-
-/**
- * Request body
- */
-export type RequestBody = Record<string, any>;
 
 /**
  * Snap BI API client for bank integration payments

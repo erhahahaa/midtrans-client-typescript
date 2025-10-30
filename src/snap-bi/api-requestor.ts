@@ -1,16 +1,5 @@
+import type { RequestBody, RequestHeaders } from '../types';
 import { SnapBiConfig } from './config';
-
-/**
- * HTTP request headers
- */
-export interface RequestHeaders {
-  [key: string]: string;
-}
-
-/**
- * Request body
- */
-export type RequestBody = Record<string, any>;
 
 /**
  * Error response structure
