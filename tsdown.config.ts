@@ -8,5 +8,5 @@ export default defineConfig({
   sourcemap: true,
   // minify: false,
   external: [],
-  target: 'es2020',
+  target: 'esnext',
 });
