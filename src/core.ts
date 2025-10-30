@@ -7,13 +7,12 @@ import type { CustomerDetails, ItemDetails, PaymentType, TransactionDetails } fr
  * Credit card details
  */
 export interface CreditCard {
-  token_id?: string;
-  bank?: string;
+  token_id: string;
+  bank?: 'mandiri' | 'bni' | 'cimb' | 'bca' | 'maybank' | 'bri';
   installment_term?: number;
   bins?: string[];
   type?: string;
   save_token_id?: boolean;
-  authentication?: boolean;
 }
 
 /**
