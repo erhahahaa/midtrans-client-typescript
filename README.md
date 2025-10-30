@@ -1,15 +1,24 @@
 # Midtrans Client (TypeScript)
 
+[![npm version](https://img.shields.io/npm/v/@erhahahaa/midtrans-client-typescript.svg?style=flat-square)](https://www.npmjs.com/package/@erhahahaa/midtrans-client-typescript)
+[![npm downloads](https://img.shields.io/npm/dm/@erhahahaa/midtrans-client-typescript.svg?style=flat-square)](https://www.npmjs.com/package/@erhahahaa/midtrans-client-typescript)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](./LICENSE)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue?style=flat-square)](https://www.typescriptlang.org/)
+
 **Unofficial** TypeScript rewrite of the Midtrans Node.js client with zero dependencies.
 
 > ⚠️ **Note**: This is an unofficial package. For the official client, use [`midtrans-client`](https://www.npmjs.com/package/midtrans-client).
 
+---
+
 ## Features
 
-- Zero runtime dependencies
-- Full TypeScript support
-- Native `fetch` API (Node.js 18+)
-- ESM and CommonJS support
+* Zero runtime dependencies
+* Full TypeScript support
+* Native `fetch` API (Node.js 18+)
+* ESM and CommonJS support
+
+---
 
 ## Installation
 
@@ -18,6 +27,8 @@ npm install @erhahahaa/midtrans-client-typescript
 ```
 
 **Requirements:** Node.js 18+
+
+---
 
 ## Usage
 
@@ -92,4 +103,4 @@ See [Midtrans Documentation](https://docs.midtrans.com) for complete API details
 
 ## License
 
-MIT
+This project is licensed under the [MIT License](./LICENSE) © 2025 @erhahahaa.
