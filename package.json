@@ -1,5 +1,5 @@
 {
-  "name": "midtrans-client-typescript",
+  "name": "@erhahahaa/midtrans-client-typescript",
   "version": "1.0.0",
   "description": "Unofficical typescript version of midtrans client.",
   "main": "./dist/index.js",
@@ -20,6 +20,9 @@
   "files": [
     "dist"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "build": "tsdown",
     "dev": "tsdown --watch",
