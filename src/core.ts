@@ -1,7 +1,7 @@
 import { ApiConfig, type ApiConfigOptions } from './config';
 import { HttpClient } from './http-client';
 import { Transaction } from './transaction';
-import type { CustomerDetails, ItemDetails, TransactionDetails } from './types';
+import type { CustomerDetails, ItemDetails, PaymentType, TransactionDetails } from './types';
 
 /**
  * Credit card details
@@ -20,7 +20,7 @@ export interface CreditCard {
  * Charge parameter
  */
 export interface ChargeParameter {
-  payment_type: string;
+  payment_type: PaymentType;
   transaction_details: TransactionDetails;
   item_details?: ItemDetails[];
   customer_details?: CustomerDetails;
@@ -72,7 +72,7 @@ export interface CardTokenParameter {
  * Payment account parameter
  */
 export interface PaymentAccountParameter {
-  payment_type: string;
+  payment_type: PaymentType;
   gopay_partner?: {
     phone_number: string;
     country_code: string;
@@ -90,7 +90,7 @@ export interface SubscriptionParameter {
   name: string;
   amount: string | number;
   currency: string;
-  payment_type: string;
+  payment_type: PaymentType;
   token: string;
   schedule: {
     interval: number;
@@ -114,7 +114,7 @@ export interface ChargeResponse {
   transaction_id: string;
   order_id: string;
   gross_amount: string;
-  payment_type: string;
+  payment_type: PaymentType;
   transaction_time: string;
   transaction_status: string;
   fraud_status?: string;
@@ -147,7 +147,7 @@ export interface SubscriptionResponse {
   };
   status: string;
   token: string;
-  payment_type: string;
+  payment_type: PaymentType;
 }
 
 /**

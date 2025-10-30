@@ -1,6 +1,7 @@
 import { ApiConfig } from './config';
 import { HttpClient } from './http-client';
 import { MidtransError } from './error';
+import type { PaymentType } from './types';
 
 /**
  * Notification object received from Midtrans webhook
@@ -8,7 +9,7 @@ import { MidtransError } from './error';
 export interface NotificationObject {
   transaction_id: string;
   order_id: string;
-  payment_type?: string;
+  payment_type?: PaymentType;
   transaction_status?: string;
   transaction_time?: string;
   fraud_status?: string;
@@ -34,7 +35,7 @@ export interface TransactionStatusResponse {
   transaction_id: string;
   order_id: string;
   gross_amount: string;
-  payment_type: string;
+  payment_type: PaymentType;
   transaction_time: string;
   transaction_status: string;
   fraud_status?: string;
