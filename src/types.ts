@@ -3,13 +3,14 @@
  * Item details
  */
 export interface ItemDetails {
-  id: string;
+  id?: string;
   price: number;
   quantity: number;
   name: string;
   brand?: string;
   category?: string;
   merchant_name?: string;
+  url?: string
 }
 
 /**
