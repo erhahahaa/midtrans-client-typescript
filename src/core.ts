@@ -31,6 +31,9 @@ export interface QRIS {
 export interface BankTransfer {
   bank: 'permata' | 'bni' | 'bri' | 'bca'
   va_number?: string
+  permata?: {
+    recipient_name: string
+  }
 }
 
 /**
