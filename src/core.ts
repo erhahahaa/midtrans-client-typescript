@@ -151,6 +151,8 @@ export interface ChargeResponse extends Record<string, unknown> {
 		va_number: string;
 	}>;
 	permata_va_number?: string;
+	bill_key?: string;
+	biller_code?: string;
 }
 
 /**
