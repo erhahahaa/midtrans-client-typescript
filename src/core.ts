@@ -133,6 +133,13 @@ export interface SubscriptionParameter extends Record<string, unknown> {
 		account_id?: string;
 	};
 }
+
+export interface Action extends Record<string, unknown> {
+	name: string;
+	url: string;
+	method: string;
+}
+
 /**
  * Charge response
  */
@@ -146,6 +153,7 @@ export interface ChargeResponse extends Record<string, unknown> {
 	transaction_time: string;
 	transaction_status: string;
 	fraud_status?: string;
+	actions?: Action[];
 	va_numbers?: Array<{
 		bank: string;
 		va_number: string;
