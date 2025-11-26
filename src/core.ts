@@ -150,6 +150,7 @@ export interface ChargeResponse extends Record<string, unknown> {
 		bank: string;
 		va_number: string;
 	}>;
+	permata_va_number?: string;
 }
 
 /**
