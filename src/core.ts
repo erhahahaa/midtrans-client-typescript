@@ -33,7 +33,8 @@ export interface BankTransfer {
   va_number?: string
   permata?: {
     recipient_name: string
-  }
+  };
+  [key: string]: any;
 }
 
 /**
