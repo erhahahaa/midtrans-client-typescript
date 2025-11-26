@@ -55,6 +55,12 @@ export interface ChargeParameter {
   };
   qris?: QRIS;
   metadata?: Record<string, any>;
+  echannel?: {
+    // Mandiri bill payment info need at least 2 info lines
+    bill_info1: string;
+    bill_info2: string;
+    [key: string]: any;
+  }
   [key: string]: any;
 }
 
