@@ -146,6 +146,10 @@ export interface ChargeResponse extends Record<string, unknown> {
 	transaction_time: string;
 	transaction_status: string;
 	fraud_status?: string;
+	va_numbers?: Array<{
+		bank: string;
+		va_number: string;
+	}>;
 }
 
 /**
